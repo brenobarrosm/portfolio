@@ -1,3 +1,105 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Amatic+SC:wght@400;700&family=Monda:wght@400;700&display=swap');
+
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css');
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+     width: 100%;
+     height: 100vh;
+     overflow: hidden;
+     position: relative;
+}
+
+.img-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #222;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.45;
+    animation: zoom 8s;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.header-content {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+}
+
+.header-content h1 {
+    font-family: "Monda", serif;
+    color: azure;
+    font-size: 4em;
+    font-weight: 200;
+    margin-bottom: 0.1em;
+    text-shadow: 0.4rem 0.4rem 2.5px rgba(0, 0, 0, .5);
+    line-height: 3rem;
+    animation: moveTextHeader 1.3s;
+}
+
+.header-content p {
+    font-family: "Amatic SC", serif;
+    color: azure;
+    font-size: 1.5em;
+    text-shadow: 0.4rem 0.4rem 2px rgba(0, 0, 0, .5);
+    margin-bottom: 0.8em;
+    margin-left: .2em;
+    animation: moveTextHeader 1.4s;
+}
+
+.header-content button {
+    font-family:"Monda", serif;
+    color: azure;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    background: #f46b45;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eea849, #f46b45);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #eea849, #f46b45); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 1.2rem 3rem 1.2rem;
+    border-radius: 8px;
+    animation: moveButtonHeader 1.5s;
+}
+
+.header-content button:hover {
+    opacity: .9;
+    color: #222;
+}
+
+@keyframes moveTextHeader {
+    0% {
+        transform: translateX(-20rem) rotateY(-45deg);
+    }
+
+    100% {
+        transform: translateX(0) rotateY(0);
+    }
+}
+
+@keyframes moveButtonHeader {
+    0% {
+        transform: translateY(20rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

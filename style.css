@@ -2,6 +2,24 @@
 
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css');
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(66, 65, 65);
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #f8744f;
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #fa572a;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -25,8 +43,9 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.45;
-    animation: zoom 8s;
+    opacity: 0.5;
+    filter: blur(3px);
+    animation: zoom 1.5s;
 }
 
 @keyframes zoom {
@@ -39,6 +58,40 @@ header {
     }
 }
 
+.menu {
+    width: 100%;
+    float: left;
+    background-color: #222;
+    padding: 1.5vh 8%;   
+}
+
+.menu li {
+    float: left;
+    list-style: none;
+    animation: moveMenu 0.8s;
+}
+
+.menu li a {
+    font-family: "Monda", serif;
+    font-size: 0.9em;
+    color: azure;
+    margin-right: 2em;
+}
+
+.menu li a:hover {
+    color: #f46b45;
+}
+
+@keyframes moveMenu{
+    0% {
+        transform: translateY(-20em);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .header-content {
     position: absolute;
     top: 30%;
@@ -48,9 +101,9 @@ header {
 .header-content h1 {
     font-family: "Monda", serif;
     color: azure;
-    font-size: 4em;
+    font-size: 5.5em;
     font-weight: 200;
-    margin-bottom: 0.1em;
+    margin-bottom: 0.15em;
     text-shadow: 0.4rem 0.4rem 2.5px rgba(0, 0, 0, .5);
     line-height: 3rem;
     animation: moveTextHeader 1.3s;
@@ -59,9 +112,9 @@ header {
 .header-content p {
     font-family: "Amatic SC", serif;
     color: azure;
-    font-size: 1.5em;
+    font-size: 2em;
     text-shadow: 0.4rem 0.4rem 2px rgba(0, 0, 0, .5);
-    margin-bottom: 0.8em;
+    margin-bottom: 1.2em;
     margin-left: .2em;
     animation: moveTextHeader 1.4s;
 }
@@ -76,7 +129,7 @@ header {
     background: linear-gradient(to left, #eea849, #f46b45); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 1.2rem 3rem 1.2rem;
     border-radius: 8px;
-    animation: moveButtonHeader 1.5s;
+    animation: moveButtonHeader 1.2s;
 }
 
 .header-content button:hover {
@@ -103,3 +156,123 @@ header {
         transform: translateY(0);
     }
 }
+
+.about-me {
+    padding: 5em;
+    background-color: rgb(77, 77, 77);
+    overflow: hidden;
+}
+
+.about-me h1 {
+    text-align: center;
+    font-family: "Monda", serif;
+    font-size: 3em;
+    color: #f46b45;
+}
+
+.about-me p {
+    text-align: justify;
+    padding: 3vh 2vw 3vh 60vw;
+    font-family: "Monda", serif;
+    color: azure;
+}
+
+.header-section {
+    font-size: 2rem;
+    font-family: "Monda", serif;
+    color: azure;
+    padding-bottom: 5rem;
+    padding-top: 3rem;
+    text-align: center;
+}
+
+.trajetoria-section {
+    background-color: #222;
+    
+}
+
+.trajetoria {
+    background-color: #222;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 18rem;
+    height: 25rem;
+    position: relative;
+    
+}
+
+.card-img-wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #222;
+}
+
+.card-img-wrapper img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+}
+
+.card-info {
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    text-shadow: 0 0.1rem 0.1rem black;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+}
+
+.card-info h2 {
+    font-family: "Monda", serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: azure;
+    padding-bottom: .6rem;
+}
+
+.card-info h3 {
+    font-family: "Monda", serif;
+    font-weight: 800;
+    color: #f8744f;
+    padding-bottom: .4rem;
+}
+
+.card-info p {
+    font-family: "Monda", serif;
+    color: azure;
+    font-weight: 400;
+    width: 80%;
+    padding-bottom: 1rem;
+
+}
+
+.card-info button {
+    font-size: 1.2rem;
+    font-family: "Monda", serif;
+    color: azure;
+    width: 8rem;
+    height: 2.5rem;
+    background: #f46b45;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eea849, #f46b45);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #eea849, #f46b45); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-shadow: 0 0.1rem 0.1rem black;
+    border: none;
+    border-radius: .5rem;
+}
+
+.card:hover .card-info {
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+.card:hover .card-img-wrapper img {
+    filter: blur(3px);
+}
+

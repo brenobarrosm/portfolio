@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imagens/favicon-32x32.png">
     <link rel="stylesheet" href="style.css"> 
+    <script src="app.js"></script>
     <script src="https://kit.fontawesome.com/df7a186960.js" crossorigin="anonymous"></script>
     <title>Portfólio - Breno de Barros</title>
 </head>
@@ -12,12 +13,12 @@
     
     <div class="container">
         <header>
-            <nav class="menu">
+            <nav class="menu" id="home">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about-me">Sobre Mim</a></li>
-                    <li><a href="#">Trajetória</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#trajectory">Trajetória</a></li>
+                    <li><a href="#contact">Contato</a></li>
                 
                 </ul>
             </nav>
@@ -32,7 +33,7 @@
             </div>
         </header>
         
-        <section class="about-me">
+        <section class="about-me" id="about-me">
             <img src="imagens/foto pessoal.jpg" alt="Breno de Barros">
             <h1>Sobre mim</h1>
             <h3>Breno de Barros</h3>
@@ -49,14 +50,14 @@
 
         <hr class="separator">
 
-        <section class="trajetoria-section">
+        <section class="trajectory-section">
 
-            <div class="header-section">
+            <div class="header-section" id="trajectory">
                 <h1>Trajetória</h1>
                 <hr class="hr-header">
             </div>
 
-            <div class="trajetoria">
+            <div class="trajectory">
 
                 <div class="card">
 
@@ -107,32 +108,41 @@
 
         <hr class="separator">
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="header-section">
                 <h1>Contato</h1>
                 <hr class="hr-header">
             </div>
 
             <div class="contact-cards">
-                <div class="contact-info">
-                    <i class="card-contact-icon fab fa-instagram"></i>
-                    <p>@brenobarrosm</p>
-                </div>
+                <a target="_blank" href="https://www.instagram.com/brenobarrosm/">
+                    <div class="contact-info">
+                        <i class="card-contact-icon fab fa-instagram"></i>
+                        <p>@brenobarrosm</p>
+                    </div>
+                 </a>
     
-                <div class="contact-info">
-                    <i class="card-contact-icon fab fa-facebook-f"></i>
-                    <p>/breno.mongelo</p>
-                </div>
+                <a target="_blank" href="https://www.facebook.com/breno.mongelo/">
+                    <div class="contact-info">
+                        <i class="card-contact-icon fab fa-facebook-f"></i>
+                        <p>/breno.mongelo</p>
+                    </div>
+                </a>
     
-                <div class="contact-info">
-                    <i class="card-contact-icon far fa-envelope"></i>
-                    <p>brenowbarros21@gmail.com</p>
-                </div>
+                <a href="">
+                    <div class="contact-info">
+                        <i class="card-contact-icon far fa-envelope"></i>
+                        <p>brenowbarros21@gmail.com</p>
+                    </div>
+                </a>
             </div>
             
         </section>
 
+
+        <a href="#home"><button onclick="refresh()" id="btn-top" >Home</button></a>
     </div>
 
 </body>
+
 </html>

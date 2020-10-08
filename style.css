@@ -304,6 +304,10 @@ header {
     border-radius: .5rem;
 }
 
+.card-info a:hover button{
+    color: #222;
+}
+
 .card:hover .card-info {
     bottom: 2rem;
     opacity: 1;
